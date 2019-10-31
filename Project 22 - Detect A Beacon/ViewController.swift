@@ -18,6 +18,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     var locationManager: CLLocationManager?
     var beaconDetected = false
     let beaconsArray = ["5A4BCFCE-174E-4BAC-A814-092E77F6B7E5", "E2C56DB5-DFFB-48D2-B060-D0F5A71096E0", "74278BDA-B644-4520-8F0C-720EAF059935"]
+    var circleView: UIView!
     
 
     override func viewDidLoad() {
@@ -28,6 +29,13 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         locationManager?.requestAlwaysAuthorization()
         
         view.backgroundColor = .gray
+                
+        circleView = UIView(frame: CGRect(x: view.frame.width / 2, y: view.frame.height / 2, width: 256, height: 256))
+        circleView.center = view.center
+        circleView.backgroundColor = .black
+        circleView.layer.cornerRadius = 128
+        view.addSubview(circleView)
+        
         
         beaconDetected = false
         
@@ -60,24 +68,23 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             case .far:
                 self.view.backgroundColor = .blue
                 self.distanceReading.text = "FAR"
-                print("far")
-
+                self.circleView.transform = CGAffineTransform(scaleX: 0.25, y: 0.25)
+      
             case .near:
                 self.view.backgroundColor = .orange
                 self.distanceReading.text = "NEAR"
-                print("Near")
-                
+                self.circleView.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
+
             case .immediate:
                 self.view.backgroundColor = .red
                 self.distanceReading.text = "IMMEDIATE"
-                print("Immediate")
-                
+                self.circleView.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+
             default:
                 self.view.backgroundColor = .gray
                 self.distanceReading.text = "UNKNOWN"
                 self.beaconName.text = "No Beacon Detected"
-
-                print("Unknown")
+                self.circleView.transform = CGAffineTransform(scaleX: 0.01, y: 0.01)
             }
         }
     }

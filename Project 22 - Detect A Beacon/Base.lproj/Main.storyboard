@@ -15,22 +15,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unknown" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NQ7-Xt-DXo">
-                                <rect key="frame" x="129.5" y="429" width="155" height="48"/>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="40"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NO BEACON DETECTED" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TQ2-1C-igh">
                                 <rect key="frame" x="112" y="116" width="190" height="21.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unknown" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NQ7-Xt-DXo">
+                                <rect key="frame" x="129.5" y="788" width="155" height="48"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="NQ7-Xt-DXo" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Hgi-5R-6g8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="NQ7-Xt-DXo" secondAttribute="bottom" constant="26" id="FTq-sn-5Bu"/>
                             <constraint firstItem="TQ2-1C-igh" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="VUV-4q-Nxn"/>
                             <constraint firstItem="TQ2-1C-igh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="72" id="g2J-hT-CB3"/>
                             <constraint firstItem="NQ7-Xt-DXo" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="uvg-fy-vkt"/>
