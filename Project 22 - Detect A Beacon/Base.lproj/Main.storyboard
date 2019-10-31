@@ -21,15 +21,24 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NO BEACON DETECTED" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TQ2-1C-igh">
+                                <rect key="frame" x="112" y="116" width="190" height="21.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="NQ7-Xt-DXo" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Hgi-5R-6g8"/>
+                            <constraint firstItem="TQ2-1C-igh" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="VUV-4q-Nxn"/>
+                            <constraint firstItem="TQ2-1C-igh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="72" id="g2J-hT-CB3"/>
                             <constraint firstItem="NQ7-Xt-DXo" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="uvg-fy-vkt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="beaconName" destination="TQ2-1C-igh" id="B3H-xG-fNq"/>
                         <outlet property="distanceReading" destination="NQ7-Xt-DXo" id="ekf-KC-8Am"/>
                     </connections>
                 </viewController>
